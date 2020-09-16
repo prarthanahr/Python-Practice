@@ -5,15 +5,15 @@ from pathlib import Path
 
 html = Template(Path('index.html').read_text())
 email = EmailMessage()
-email['from'] = 'Andrei Neagoie'
-email['to'] = 'prarthanahr6@gmail.com'
-email['subject'] = 'You won 1,000,000 dollars!'
+email['from'] = 'your name'
+email['to'] = 'to email address here'
+email['subject'] = 'message to be send'
 
 email.set_content(html.substitute({'name': 'TinTin'}), 'html')
 
 with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
   smtp.ehlo()
   smtp.starttls()
-  smtp.login('raopath123@gmail.com', '3210go..')
+  smtp.login('your email', 'your password')
   smtp.send_message(email)
   print('all good boss!')
