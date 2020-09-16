@@ -9,5 +9,5 @@ def pdf_combine(pdf_list):
     for pdf in pdf_list:
         print(pdf)
         merger.append(pdf)
-    merger.write('xxx.pdf')
-    print("donwwww")
+    merger.write('xyz.pdf')
+    print("done")
