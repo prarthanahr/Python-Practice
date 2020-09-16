@@ -1,4 +1,4 @@
-#apply water mark
+#applying water mark
 
 import PyPDF2
 
